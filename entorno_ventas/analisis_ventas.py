@@ -15,7 +15,8 @@ csv_file = 'entorno_ventas/ventas_productos.csv'
 
 datos = pd.read_csv(csv_file)
 print(datos.columns)
-print("Datos CSV:")
+print("\n" + "-" * 50)
+print("Datos CSV")
 print(datos)
 
 #Precio total por producto
