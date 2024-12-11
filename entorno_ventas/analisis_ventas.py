@@ -2,15 +2,12 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib
+import matplotlib.pyplot as plt
 
 os.system("clear")
 print("NumPy:", np.__version__)
 print("Pandas:", pd.__version__)
 print("Matplotlib:", matplotlib.__version__)
-
-import pandas as pd
-import matplotlib.pyplot as plt
-
 csv_file = 'entorno_ventas/ventas_productos.csv'
 
 datos = pd.read_csv(csv_file)
@@ -21,6 +18,7 @@ print(datos)
 
 #Precio total por producto
 datos['precio_total'] = datos['cantidad'] * datos['precio']
+
 print("\n" + "-" * 50)
 print(datos)
 
@@ -34,7 +32,7 @@ plt.xlabel('Producto', fontsize=14)
 plt.ylabel('Precio Total', fontsize=14)
 
 #guarda gráfico como PNG
-imagen_guardada = 'entorno_ventas/precio_total_por_producto.png'
+imagen_guardada = 'entorno_ventas/local_precio_total_por_producto.png'
 plt.tight_layout()
 plt.savefig(imagen_guardada)
 
